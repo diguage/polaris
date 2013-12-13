@@ -45,10 +45,16 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :test do
+
+end
+
+
 group :development, :test do
   gem "thin", "~> 1.6.1"
   gem "awesome_print", "~> 1.2.0"
   gem "debugger", "~> 1.6.3"
+  gem "rspec-rails", "~> 2.14.0"
 end
 
 gem "rails_admin", "~> 0.6.0"

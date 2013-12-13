@@ -1,5 +1,6 @@
 Polaris::Application.routes.draw do
-  get "home/index"
+  root "home#index"
+
   get "home/about"
   get "home/contact"
   get "home/help"

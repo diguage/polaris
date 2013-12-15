@@ -1,0 +1,24 @@
+= form_for @website do |f|
+  - if @website.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@website.errors.count, "error")} prohibited this website from being saved:"
+      ul
+        - @website.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :url
+    = f.text_field :url
+  .field
+    = f.label :host
+    = f.text_field :host
+  .field
+    = f.label :favicon
+    = f.text_field :favicon
+  .field
+    = f.label :sort
+    = f.text_field :sort
+  .actions = f.submit 'Save'

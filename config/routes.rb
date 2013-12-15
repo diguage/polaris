@@ -1,4 +1,6 @@
 Polaris::Application.routes.draw do
+  resources :websites
+
   devise_for :users
   root "home#index"
 

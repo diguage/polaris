@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @website.title
+p
+  strong Url:
+  = @website.url
+p
+  strong Host:
+  = @website.host
+p
+  strong Favicon:
+  = @website.favicon
+p
+  strong Sort:
+  = @website.sort
+
+= link_to 'Edit', edit_website_path(@website)
+'|
+= link_to 'Back', websites_path

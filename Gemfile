@@ -1,6 +1,8 @@
 #source 'https://rubygems.org'
 source 'http://ruby.taobao.org'
 
+ruby "2.0.0"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 4.0.2"
 
@@ -49,6 +51,9 @@ group :test do
 
 end
 
+group :development do
+  gem "better_errors", "~> 1.0.1"
+end
 
 group :development, :test do
   gem "thin", "~> 1.6.1"
@@ -60,9 +65,10 @@ end
 gem "rails_admin", "~> 0.6.0"
 gem "cancan", "~> 1.6.10"
 gem "devise", "~> 3.2.2"
+gem "devise-encryptable", "~> 0.1.2"
 gem "slim-rails", "~> 2.0.4"
 gem "kaminari", "~> 0.15.0"
 gem "carrierwave", "~> 0.9.0"
 gem "mini_magick", "~> 3.7.0"
-gem "role_model", "~> 0.8.1"
+gem "rolify", "~> 3.2.0"
 gem "unicorn", "~> 4.7.0"

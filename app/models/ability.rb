@@ -5,8 +5,10 @@ class Ability
     user ||= User.new
     if user.has_role? :admin
       can :manage, :all
+      can :access, :rails_admin
     else
-      can :read, :all
+      can :read, Website
+      can :read, Category
     end
     # Define abilities for the passed in user here. For example:
     #

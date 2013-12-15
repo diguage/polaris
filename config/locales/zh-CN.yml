@@ -340,7 +340,10 @@ zh-CN:
       user:
         email: '电子邮箱'
         username: '登录名'
+        nickname: '昵称'
         realname: '真实姓名'
+        password: '密码'
+        password_confirmation: '确认密码'
         roles: '角色'
         sign_in_count: '登录次数'
         last_sign_in_at: '最近登录时间'

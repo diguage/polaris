@@ -10,18 +10,16 @@
     .collapse.navbar-collapse
       ul.nav.navbar-nav
         li.active
-          = link_to 'Home', root_path
+          = link_to '首页', root_path
         li
-          = link_to 'About', home_about_path
+          = link_to '关于我们', about_path
         li
-          = link_to 'Contact', home_contact_path
-        li
-          = link_to 'Help', home_help_path
+          = link_to '在线帮助', help_path
       ul.nav.navbar-nav.pull-right
         - if current_user
           li.dropdown
             a.dropdown-toggle href="#{root_path}" data-toggle="dropdown"
-              | D瓜哥
+              = current_user.nickname
               b.caret
             ul.dropdown-menu
               li = link_to '修改资料', edit_user_registration_path

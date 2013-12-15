@@ -1,4 +1,15 @@
 Polaris::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  resources :categories
+
+  resources :websites
+
+  devise_for :users
+  root "home#index"
+
+  get "about" =>  "home#about"
+  get "help" => "home#help"
+  get "contact" => "home#contact"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

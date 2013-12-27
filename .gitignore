@@ -33,3 +33,6 @@ config/initializers/secret_token.rb
 
 # rubymine
 .idea
+
+# Ignore application configuration
+/config/application.yml

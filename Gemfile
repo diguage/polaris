@@ -62,6 +62,10 @@ group :development, :test do
   gem "rspec-rails", "~> 2.14.0"
 end
 
+group :production do
+  gem "mysql2", "~> 0.3.14"
+end
+
 gem "rails_admin", "~> 0.6.0"
 gem "cancan", "~> 1.6.10"
 gem "devise", "~> 3.2.2"

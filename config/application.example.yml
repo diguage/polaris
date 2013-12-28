@@ -1,0 +1,13 @@
+# Add application configuration variables here.
+
+defaults: &defaults
+  TITLE: 极客导航
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

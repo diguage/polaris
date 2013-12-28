@@ -23,6 +23,8 @@ capybara-*.html
 .rvmrc
 /vendor/bundle
 /public/system/*
+/public/assets/
+
 /coverage/
 /spec/tmp/*
 **.orig
@@ -34,6 +36,7 @@ pickle-email-*.html
 .idea
 
 # Ignore application configuration
-/config/application.yml
-/config/initializers/secret_token.rb
-/config/database.yml
+config/application.yml
+config/initializers/secret_token.rb
+config/database.yml
+config/database.yml

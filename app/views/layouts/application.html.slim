@@ -2,8 +2,8 @@ doctype
 html
   head
     title #{Figaro.env.TITLE}-hao.jike.io
+    link href="http://cdn.staticfile.org/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css"
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-    = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   body
     = render 'layouts/navigation'
@@ -11,3 +11,5 @@ html
     p.alert= alert
     .container
       = yield
+    script src="http://cdn.staticfile.org/twitter-bootstrap/3.0.3/js/bootstrap.min.js" type="text/javascript"
+    = javascript_include_tag "application", "data-turbolinks-track" => true

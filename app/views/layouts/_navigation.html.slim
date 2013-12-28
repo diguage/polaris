@@ -10,9 +10,9 @@
     .collapse.navbar-collapse
       ul.nav.navbar-nav
         li.active
-          = link_to I18n.t('site.navigation.index'), root_path
+          = link_to I18n.t('navigation.index'), root_path
         li
-          = link_to I18n.t('site.navigation.about'), about_path
+          = link_to I18n.t('navigation.about'), about_path
 
       ul.nav.navbar-nav.pull-right
         - if current_user
@@ -21,8 +21,9 @@
               = current_user.nickname
               b.caret
             ul.dropdown-menu
-              li = link_to I18n.t('site.navigation.personal.update_profile'), edit_user_registration_path
-              li = link_to I18n.t('site.navigation.logout'), destroy_user_session_path, method: :delete
+              li = link_to I18n.t('account.update_profile'), edit_user_registration_path
+              li = link_to I18n.t('website.add'), new_website_path
+              li = link_to I18n.t('account.logout'), destroy_user_session_path, method: :delete
         - else
-          li = link_to I18n.t('site.navigation.register'), new_user_registration_path
-          li = link_to I18n.t('site.navigation.login'), new_user_session_path
+          li = link_to I18n.t('account.register'), new_user_registration_path
+          li = link_to I18n.t('account.login'), new_user_session_path

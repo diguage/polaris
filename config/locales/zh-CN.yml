@@ -376,12 +376,15 @@ zh-CN:
         updated_at: '更新时间'
         users: '用户'
 
-  site:
-    navigation:
-      index: '首页'
-      about: '关于'
-      login: '登录'
-      logout: '退出'
-      register: '注册'
-      personal:
-        update_profile: '修改资料'
+  navigation:
+    index: '首页'
+    about: '关于'
+
+  account:
+    login: '登录'
+    logout: '退出'
+    register: '注册'
+    update_profile: '修改资料'
+
+  website:
+    add: '添加网址'

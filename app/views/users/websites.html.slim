@@ -1,4 +1,4 @@
-h1 Listing websites
+h1 我的网址
 
 table
   tr
@@ -6,7 +6,6 @@ table
     th Url
     th Host
     th Favicon
-    th User
     th
     th
     th
@@ -17,7 +16,6 @@ table
       td = website.url
       td = website.host
       td = website.favicon
-      td = website.user.nickname
       td = link_to 'Show', website
       td = link_to 'Edit', edit_website_path(website)
       td = link_to 'Destroy', website, data: {:confirm => 'Are you sure?'}, :method => :delete

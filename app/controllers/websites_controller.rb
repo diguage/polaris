@@ -5,7 +5,7 @@ class WebsitesController < ApplicationController
   # GET /websites
   # GET /websites.json
   def index
-    @websites = Website.all
+    @websites = Website.published
   end
 
   # GET /websites/1
@@ -25,11 +25,11 @@ class WebsitesController < ApplicationController
   # POST /websites
   # POST /websites.json
   def create
-    @website = Website.new(website_params)
+    @website = current_user.websites.build(website_params)
 
     respond_to do |format|
       if @website.save
-        format.html { redirect_to @website, notice: 'Website was successfully created.' }
+        format.html { redirect_to @website, notice: '网址添加成功。等待管理员审核。' }
         format.json { render action: 'show', status: :created, location: @website }
       else
         format.html { render action: 'new' }
@@ -41,6 +41,7 @@ class WebsitesController < ApplicationController
   # PATCH/PUT /websites/1
   # PATCH/PUT /websites/1.json
   def update
+    @website = current_user.articles.find(params[:id])
     respond_to do |format|
       if @website.update(website_params)
         format.html { redirect_to @website, notice: 'Website was successfully updated.' }
@@ -55,7 +56,9 @@ class WebsitesController < ApplicationController
   # DELETE /websites/1
   # DELETE /websites/1.json
   def destroy
-    @website.destroy
+    @website = current_user.websites.find(params[:id])
+    @website.status = :deleted
+    @website.save
     respond_to do |format|
       format.html { redirect_to websites_url }
       format.json { head :no_content }
@@ -70,6 +73,6 @@ class WebsitesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def website_params
-      params.require(:website).permit(:url, :host, :title, :favicon, :sort)
+      params.require(:website).permit(:url, :host, :title, :favicon)
     end
 end

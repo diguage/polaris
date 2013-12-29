@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131215140847) do
+ActiveRecord::Schema.define(version: 20131229012653) do
 
   create_table "categories", force: true do |t|
     t.string   "title"
@@ -92,6 +92,8 @@ ActiveRecord::Schema.define(version: 20131215140847) do
     t.integer  "sort",       limit: 8
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "status",               default: 0
+    t.integer  "user_id"
   end
 
 end

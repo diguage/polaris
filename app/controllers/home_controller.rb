@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @websites = Website.all
+    @websites = Website.published
   end
 
   def about

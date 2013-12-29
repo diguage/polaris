@@ -10,6 +10,10 @@ Polaris::Application.routes.draw do
   get "about" =>  "home#about"
   get "help" => "home#help"
   get "contact" => "home#contact"
+
+  scope path: :my, as: :my do
+    get 'websites', to: 'users#websites', as: :websites
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

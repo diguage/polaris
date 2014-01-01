@@ -2,6 +2,8 @@
 
 defaults: &defaults
   TITLE: 极客导航
+  APP_NAME: 极客导航网
+  NEWRELIC_KEY: 123
 
 development:
   <<: *defaults

@@ -23,6 +23,12 @@ task :setup => :environment do
   queue! %[mkdir -p "#{deploy_to}/shared/config"]
   queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/config"]
 
+  queue! %[touch "#{deploy_to}/shared/config/database.yml"]
+  queue  %[echo "-----> Be sure to edit 'shared/config/database.yml'."]
+
+  queue! %[touch "#{deploy_to}/shared/config/application.yml"]
+  queue  %[echo "-----> Be sure to edit 'shared/config/application.yml'."]
+
   queue! %[mkdir -p "#{deploy_to}/shared/tmp"]
   queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/tmp"]
 
@@ -35,9 +41,6 @@ task :setup => :environment do
 
   queue! %[touch "#{deploy_to}/shared/tmp/pids/server.pid"]
   queue  %[echo "-----> Created the 'shared/config/database.yml' file successfully!."]
-
-  queue! %[touch "#{deploy_to}/shared/config/database.yml"]
-  queue  %[echo "-----> Be sure to edit 'shared/config/database.yml'."]
 
   queue! %[mkdir -p "#{deploy_to}/shared/public/uploads/"]
   queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/public/uploads/"]

@@ -20,7 +20,6 @@
 .sass-cache
 capybara-*.html
 .rspec
-.rvmrc
 /vendor/bundle
 /public/system/*
 /public/assets/

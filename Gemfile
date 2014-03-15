@@ -1,16 +1,16 @@
 #source 'https://rubygems.org'
 source 'http://ruby.taobao.org'
 
-ruby "2.0.0"
+ruby "2.1.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem "rails", "~> 4.0.2"
+gem "rails", "~> 4.0.3"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.3.8"
+gem "sqlite3", "~> 1.3.9"
 
 # Use SCSS for stylesheets
-gem "sass-rails", "~> 4.0.1"
+gem "sass-rails", "~> 4.0.2"
 
 # Use Uglifier as compressor for JavaScript assets
 gem "uglifier", "~> 2.3.3"
@@ -56,10 +56,10 @@ group :development do
 end
 
 group :development, :test do
-  gem "thin", "~> 1.6.1"
+  gem "thin", "~> 1.6.2"
   gem "awesome_print", "~> 1.2.0"
-  gem "debugger", "~> 1.6.3"
-  gem "rspec-rails", "~> 2.14.0"
+  #gem "debugger", "~> 1.6.6"
+  gem "rspec-rails", "~> 2.14.1"
 end
 
 group :production do
@@ -68,14 +68,17 @@ end
 
 gem "rails_admin", "~> 0.6.0"
 gem "cancan", "~> 1.6.10"
-gem "devise", "~> 3.2.2"
+gem "devise", "~> 3.2.3"
 gem "devise-encryptable", "~> 0.1.2"
 gem "slim-rails", "~> 2.0.4"
-gem "kaminari", "~> 0.15.0"
+gem "kaminari", "~> 0.15.1"
 gem "carrierwave", "~> 0.9.0"
 gem "mini_magick", "~> 3.7.0"
 gem "rolify", "~> 3.2.0"
-gem "unicorn", "~> 4.7.0"
-gem "figaro", "~> 0.7.0"
 gem "enumerize", "~> 0.7.0"
 gem "newrelic_rpm", "~> 3.7.1.180"
+#gem "unicorn", "~> 4.7.0"
+gem "figaro", "~> 0.7.0"
+gem "mina", "~> 0.3.0"
+gem "mina-puma", "~> 0.1.0"
+gem "puma", "~> 2.8.1"
